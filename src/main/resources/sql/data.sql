@@ -24,18 +24,18 @@ UNLOCK TABLES;
 
 LOCK TABLES `role` WRITE;
 /*!40000 ALTER TABLE `role` DISABLE KEYS */;
-INSERT INTO `role` VALUES (1,'Default user','USER');
+INSERT INTO `role` VALUES (1,'Default applicationUser','USER');
 /*!40000 ALTER TABLE `role` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `applicationUser`
 --
 
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Name','Surname','1234','login');
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+LOCK TABLES `applicationUser` WRITE;
+/*!40000 ALTER TABLE `applicationUser` DISABLE KEYS */;
+INSERT INTO `applicationUser` VALUES (1,'Name','Surname','1234','login');
+/*!40000 ALTER TABLE `applicationUser` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --

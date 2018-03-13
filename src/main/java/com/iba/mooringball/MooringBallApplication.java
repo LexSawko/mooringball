@@ -9,10 +9,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class MooringBallApplication {
 
 	@Bean
-	BCryptPasswordEncoder bCryptPasswordEncoder(){
+	public BCryptPasswordEncoder bCryptPasswordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
-
 
 	public static void main(String[] args) {
 		SpringApplication.run(MooringBallApplication.class, args);

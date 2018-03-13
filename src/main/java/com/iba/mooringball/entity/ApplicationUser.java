@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.List;
@@ -14,8 +15,9 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class User {
+public class ApplicationUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -25,7 +27,6 @@ public class User {
     private String username;
 
     @Column(name = "password", nullable = false)
-    @JsonIgnore
     private String password;
 
     @Column(name = "first_name")
@@ -42,4 +43,3 @@ public class User {
                     referencedColumnName = "id"))
     private List<Role> roles;
 }
-

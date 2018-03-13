@@ -16,7 +16,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping(value = "mooringballs", produces = "application/json")
+@RequestMapping(value = "/mooringballs", produces = "application/json")
 @Api(value="mooringballs", description="Operations pertaining to mooring balls")
 public class MooringBallController {
     @Autowired
@@ -31,14 +31,12 @@ public class MooringBallController {
             @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
     }
     )
-    @PreAuthorize("hasAuthority('ADMIN_USER') or hasAuthority('STANDARD_USER')")
     public List<MooringBall> getMooringBalls(){
         return service.getMooringBalls();
     }
 
     @GetMapping(value = "/{id}")
     @ApiOperation(value = "Search a mooring ball with an ID",response = MooringBall.class)
-    @PreAuthorize("hasAuthority('ADMIN_USER')")
     public MooringBall getMooringBall(@PathVariable Long id){
         return service.getMooringBallById(id);
     }
