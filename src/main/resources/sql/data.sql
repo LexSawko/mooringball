@@ -32,10 +32,10 @@ UNLOCK TABLES;
 -- Dumping data for table `applicationUser`
 --
 
-LOCK TABLES `applicationUser` WRITE;
-/*!40000 ALTER TABLE `applicationUser` DISABLE KEYS */;
-INSERT INTO `applicationUser` VALUES (1,'Name','Surname','1234','login');
-/*!40000 ALTER TABLE `applicationUser` ENABLE KEYS */;
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'Name','Surname','$2a$10$tqOLddsGa5MeKEfYgiiv1Ou2xt6vHiUmGZjxL7c7.vLQWcXDIP1Yq','login');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --

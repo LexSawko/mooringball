@@ -41,7 +41,7 @@ public class MooringBallController {
         return service.getMooringBallById(id);
     }
 
-    @PostMapping
+    @PostMapping(value = "/add")
     @ApiOperation(value = "Add a mooring ball",response = MooringBall.class)
     public MooringBall addMooringBall(@RequestBody MooringBall ball){
         return service.addMooringBall(ball);
